@@ -10,9 +10,8 @@ export const metadata: Metadata = {
   openGraph: {
     title: "DannyBoy 俄罗斯方块",
     description: "挑战全班排行榜",
-    images: ["/og.png"],
   },
-  twitter: { card: "summary_large_image", images: ["/og.png"] },
+  twitter: { card: "summary", title: "DannyBoy · BLOCK BOY", description: "复古掌机挑战全班排行榜" },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
