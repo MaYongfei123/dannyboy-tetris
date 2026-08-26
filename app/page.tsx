@@ -29,13 +29,17 @@ export default function Home() {
                 <div id="centerMessage" className="center-message hidden" />
 
                 <div id="nameModal" className="modal game-modal open">
-                  <div className="pixel-panel name-panel">
+                  <div className="pixel-panel name-panel welcome-panel">
                     <p className="eyebrow">BLOCK BOY</p>
                     <h1>BLOCK BOY</h1>
-                    <p>WASD / 方向键控制<br />按空格硬降</p>
-                    <label htmlFor="nameInput">输入玩家姓名</label>
-                    <input id="nameInput" maxLength={16} autoComplete="nickname" placeholder="例如：小明" />
+                    <p id="welcomeCopy">首次挑战，请先留下你的名字。</p>
+                    <div id="nameEntry" className="name-entry">
+                      <label htmlFor="nameInput">输入玩家姓名</label>
+                      <input id="nameInput" maxLength={16} autoComplete="nickname" placeholder="例如：小明" />
+                    </div>
+                    <div id="savedPlayer" className="saved-player hidden"><span>当前玩家</span><strong id="welcomePlayer">---</strong><button id="changePlayerBtn" type="button">更换玩家</button></div>
                     <button id="startBtn" className="primary-btn">开机开始</button>
+                    <section className="welcome-rank"><div className="welcome-rank-title"><span>全班排行榜</span><button id="welcomeRankBtn" type="button">查看全部</button></div><ol id="welcomeRankList"><li>正在读取排行榜…</li></ol></section>
                     <small>无需注册 · 成绩进入全班排行榜</small>
                   </div>
                 </div>
@@ -96,7 +100,7 @@ export default function Home() {
         </div>
       </div>
 
-      <Script src="/game.js?v=4" strategy="afterInteractive" />
+      <Script src="/game.js?v=5" strategy="afterInteractive" />
     </main>
   );
 }
