@@ -96,7 +96,7 @@ export default function Home() {
         </div>
       </div>
 
-      <Script src="/game.js" strategy="afterInteractive" />
+      <Script src="/game.js?v=3" strategy="afterInteractive" />
     </main>
   );
 }
